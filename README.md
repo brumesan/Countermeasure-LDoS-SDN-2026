@@ -86,14 +86,23 @@ Os arquivos devem ser organizados conforme a seguinte estrutura:
 
 /home/$USER/mininet/mininet/
 │
-├── xgboost_collector.py         # Coleta de métricas XGBoost
-├── oif_collector.py             # Coleta de métricas OIF
-├── sentry_collector.py          # Coleta de métricas Sentry
+
+├── xgboost_collector.py         
+
+├── oif_collector.py       
+
+├── sentry_collector.py    
+
 ├── xgboost_train.py
+
 ├── xgboost_traffic.py
+
 ├── sentry_and_oif_traffic.py
+
 ├── xgb_model.json
+
 ├── scaler.pkl
+
 └── results/
 
 ## Teste mínimo
