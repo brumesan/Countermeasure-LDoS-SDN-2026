@@ -44,27 +44,27 @@ A execução dos artefatos não oferece risco de segurança para os avaliadores.
 ## Instalação.
 * Atualização do Sistema
   
-sudo apt update && sudo apt upgrade -y
+  sudo apt update && sudo apt upgrade -y
 
 * Instalação de ferramentas básicas
   
-sudo apt install -y git python3 python3-pip build-essential iperf3
+  sudo apt install -y git python3 python3-pip build-essential iperf3
 
 * Instalação das bibliotecas Python
   
-pip3 install numpy pandas scikit-learn xgboost joblib
+  pip3 install numpy pandas scikit-learn xgboost joblib
 
 * Instalação do Mininet, Open vSwitch e utilitários de rede
   
 git clone https://github.com/mininet/mininet
 
-cd mininet
+  cd mininet
 
-sudo ./util/install.sh -a
+  sudo ./util/install.sh -a
 
 * Instalação do Controlador Ryu
   
-pip3 install ryu
+  pip3 install ryu
 
 * Instalação do Online Isolation Forest (OIF)
   
@@ -76,11 +76,11 @@ pip3 install ryu
 
 * Permissões
   
-sudo chmod -R 755 /home/$USER/mininet/
+  sudo chmod -R 755 /home/$USER/mininet/
 
 * Criação do diretório de resultados.
   
-mkdir -p /home/$USER/mininet/mininet/results
+  mkdir -p /home/$USER/mininet/mininet/results
 
 * Organização do Projeto
   
