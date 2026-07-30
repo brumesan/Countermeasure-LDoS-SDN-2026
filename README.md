@@ -69,7 +69,9 @@ pip3 install ryu
 * Instalação do Online Isolation Forest (OIF)
   
   git clone https://github.com/ineveLoppiliF/Online-Isolation-Forest.git
+  
   cd Online-Isolation-Forest
+  
   pip3 install .
 
 * Permissões
