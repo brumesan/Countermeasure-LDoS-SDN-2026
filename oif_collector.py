@@ -16,7 +16,7 @@ import pandas as pd
 from sklearn.preprocessing import StandardScaler
 import joblib
 
-sys.path.append(os.path.expanduser("~/mininet/mininet/Online-Isolation-Forest"))
+sys.path.append(os.path.expanduser("home/$USER/mininet/mininet/Online-Isolation-Forest"))
 from OnlineIForest import OnlineIForest
 
 
@@ -48,8 +48,8 @@ class OIFCollector(app_manager.RyuApp):
         
         # ==== WARM-UP PARAMETERS =====
        
-        self.WARMUP_FILE = os.path.expanduser("~/mininet/mininet/warmup_normal.csv")
-        self.SCALER_FILE = os.path.expanduser("~/mininet/mininet/oif_scaler.pkl")
+        self.WARMUP_FILE = os.path.expanduser("home/$USER/mininet/mininet/warmup_normal.csv")
+        self.SCALER_FILE = os.path.expanduser("home/$USER/mininet/mininet/oif_scaler.pkl")
 
         # ==== Time-based warm-up =======
         self.WARMUP_DURATION = 180
@@ -167,7 +167,7 @@ class OIFCollector(app_manager.RyuApp):
         self.in_warmup_mode = False
 
         # === Create the operational CSV after warm-up ====
-        results_dir = os.path.expanduser("~/mininet/mininet/results")
+        results_dir = os.path.expanduser("/home/$USER/mininet/mininet/results")
         os.makedirs(results_dir, exist_ok=True)
 #        timestamp = time.strftime("%Y%m%d_%H%M%S")
         self.csv_file = os.path.join(results_dir, "oif_output.csv")
@@ -211,7 +211,7 @@ class OIFCollector(app_manager.RyuApp):
         queue.clear()
 
         self.logger.info(
-            f"{self.COLOR_CYAN}[SW {dpid}] 🔄 OIF UPDATED with a batch of {len(batch_to_learn)} samples.{self.COLOR_RESET}"
+            f"{self.COLOR_CYAN}[SW {dpid}] OIF UPDATED with a batch of {len(batch_to_learn)} samples.{self.COLOR_RESET}"
         )
 
     def _allowed_update_switches(self):
@@ -512,7 +512,7 @@ class OIFCollector(app_manager.RyuApp):
 
                         reaction_ms = (t_end - t_start) * 1000.0
                         self.logger.info(
-                            f"🚨 LDoS ALERT! [SW {dpid}] Port {port} | Reaction Time: {reaction_ms:.3f} ms"
+                            f" LDoS ALERT! [SW {dpid}] Port {port} | Reaction Time: {reaction_ms:.3f} ms"
                         )
                     else:
                         predict = 0
