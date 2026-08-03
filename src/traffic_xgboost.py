@@ -1,17 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""
 
-Generates test traffic com os 8 scenarios.
-
- - Phase 1: NORMAL block with legitimate TCP and benign background UDP traffic.
- - Phase 2:  ATTACK block with TCP, an LDoS UDP attack configured by R, T, and L,
-  and benign background UDP traffic.
- - labels_intervals_test.csv with the experiment intervals and labels
-  (0 = normal, 1 = attack).
- - Generates output_test_labeled.csv with the label_true column.
-
-"""
+# Generates test traffic com os 8 scenarios for XGBooost.
 
 import os
 import time
