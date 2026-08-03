@@ -9,9 +9,9 @@ O Sentry é uma contramedida adaptativa para detecção de ataques LDoS em redes
 Resumo. Algoritmos estáticos de aprendizado de máquina tornam os sistemas de detecção de intrusão ineficazes em ambientes dinâmicos, uma vez que esses sistemas permanecem restritos aos padrões de dados observados durante a fase de treinamento. Este artigo propõe o Sentry, uma contramedida adaptativa baseada no algoritmo Online Isolation Forest, voltada à identificação de ataques de negação de serviço de baixo volume em redes definidas por software. O Sentry realiza atualizações contínuas e incorpora critérios seletivos condicionados ao estado da rede, evitando aprendizado inadequado durante períodos de ataque e reduzindo o risco de contaminação do modelo. A avaliação experimental demonstra que o Sentry supera tanto o Online Isolation Forest com atualizações irrestritas quanto o XGBoost. O Sentry atinge métricas de revocação e pontuação F1 de até 98,89% e 98,53%, respectivamente. Em contrapartida, o XGBoost e o Online Isolation Forest exibem uma queda acentuada no desempenho, com a revocação caindo para 17,95% e 10,50%, respectivamente. 
 
 ## Estrutura do Repositório
-* `src/train.py`: Script para treinamento do modelo de detecção (XGBoost).
-* `src/traffic_xgboost.py`: Script para geração de tráfego para o xgboost.
-* `src/traffic_oif_and_sentry.py`: Script para geração de tráfego para o OIF e Sentry.
+* `src/xgboost_train.py`: Script para treinamento do modelo de detecção (XGBoost).
+* `src/xgboost_traffic.py`: Script para geração de tráfego para o xgboost.
+* `src/sentry_and_oif_traffic.py`: Script para geração de tráfego para o OIF e Sentry.
 * `main.py`: Scripts para execução dos testes e coleta de métricas (XGBoost, OIF e Sentry).
 * `data/`: Conjunto de dados utilizado nos experimentos.
 * `LICENSE`: Licença MIT de código aberto.
