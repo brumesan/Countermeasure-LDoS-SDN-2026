@@ -10,7 +10,8 @@ Resumo. Algoritmos estáticos de aprendizado de máquina tornam os sistemas de d
 
 ## Estrutura do Repositório
 * `src/train.py`: Script para treinamento do modelo de detecção (XGBoost).
-* `src/traffic.py`: Script para geração de tráfego.
+* `src/traffic_xgboost.py`: Script para geração de tráfego para o xgboost.
+* `src/traffic_oif_and_sentry.py`: Script para geração de tráfego para o OIF e Sentry.
 * `main.py`: Scripts para execução dos testes e coleta de métricas (XGBoost, OIF e Sentry).
 * `data/`: Conjunto de dados utilizado nos experimentos.
 * `LICENSE`: Licença MIT de código aberto.
