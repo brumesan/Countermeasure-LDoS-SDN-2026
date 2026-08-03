@@ -1,4 +1,4 @@
-# Contramedida-LDoS-SDN-2026
+# Contramedida-LDoS-SDN-2026 (Sentry)
 # Sentry: Uma Contramedida Adaptativa contra Ataques de Negação de Serviço de Baixo Volume
 
 Este repositório contém o código-fonte e os experimentos apresentados no artigo aceito no Simpósio Brasileiro de Cibersegurança (SBSeg 2026).
@@ -12,7 +12,9 @@ Resumo. Algoritmos estáticos de aprendizado de máquina tornam os sistemas de d
 * `src/xgboost_train.py`: Script para treinamento do modelo de detecção (XGBoost).
 * `src/xgboost_traffic.py`: Script para geração de tráfego para o xgboost.
 * `src/sentry_and_oif_traffic.py`: Script para geração de tráfego para o OIF e Sentry.
-* `main.py`: Scripts para execução dos testes e coleta de métricas (XGBoost, OIF e Sentry).
+* `sentry_collector.py`: Scripts para execução dos testes e coleta de métricas do Sentry.
+* `oif_collector.py`: Scripts para execução dos testes e coleta de métricas do OIF.
+* `xgboost_collector.py`: Scripts para execução dos testes e coleta de métricas do XGBoost.
 * `data/`: Conjunto de dados utilizado nos experimentos.
 * `LICENSE`: Licença MIT de código aberto.
 
@@ -34,7 +36,7 @@ Os experimentos foram executados em servidor com as seguintes especificações:
 A elevada capacidade de memória e processamento foi utilizada para garantir estabilidade experimental e minimizar interferências de contenção de recursos, não sendo estritamente necessária para reprodução dos experimentos.
 
 ## Requisitos de Software
-* Ambiente Base: Python 3.8+, Mininet, Open vSwitch, Ryu (OpenFlow 1.3), iperf3 (Geração de tráfego) e Socket Python (Geração do Ataque).
+* Ambiente Base: Python 3.8 (tested), Mininet, Open vSwitch, Ryu (OpenFlow 1.3), iperf3 (Geração de tráfego) e Socket Python (Geração do Ataque).
 
 ## Bibliotecas
 * numpy, pandas, joblib, xgboost, scikit-learn
@@ -73,7 +75,7 @@ git clone https://github.com/mininet/mininet
   
   cd Online-Isolation-Forest
   
-  pip3 install .
+  pip3 install -e .
 
 * Permissões
   
